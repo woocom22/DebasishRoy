@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    function paage(Request $request)
+    function page(Request $request)
     {
 
     }
@@ -16,9 +16,5 @@ class ProjectController extends Controller
 
     }
 
-    function projectDetails(Request $request)
-    {
-
-    }
 
 }
