@@ -24,7 +24,7 @@ Route::post('/reset-password',[userController::class,'ResetPassword'])->middlewa
 
 // Ajax call routes section
 Route::get('/hero-data',[HomeController::class,'heroData']);
-Route::get('/hero-data',[HomeController::class,'aboutData']);
+Route::get('/about-data',[HomeController::class,'aboutData']);
 Route::get('/social-data',[HomeController::class,'socialData']);
 Route::get('/project-details',[ProjectController::class,'projectData']);
 Route::get('/resume-link',[ResumeController::class,'resumeLink']);
@@ -34,3 +34,8 @@ Route::get('/skillData',[ResumeController::class,'skillData']);
 Route::get('/languageData',[ResumeController::class,'languageData']);
 Route::get('/contactRequest',[ContactController::class,'contactRequest']);
 
+
+// This section is used for insert data
+Route::post('/add-hero',[HomeController::class,'addHero']);
+Route::post('/add-about',[HomeController::class,'addAboutData']);
+Route::post('/add-social',[HomeController::class,'addSocialData']);

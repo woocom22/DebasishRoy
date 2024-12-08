@@ -16,7 +16,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'http://127.0.0.1:8000/user-login',
             'http://127.0.0.1:8000/send-otp',
             'http://127.0.0.1:8000/verify-otp',
-            'http://127.0.0.1:8000/reset-password'
+            'http://127.0.0.1:8000/reset-password',
+            'http://127.0.0.1:8000/add-hero',
+            'http://127.0.0.1:8000/add-about',
+            'http://127.0.0.1:8000/add-social'
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
