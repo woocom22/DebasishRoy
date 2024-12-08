@@ -1,9 +1,13 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ResumeController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\userController;
 use App\Http\Middleware\TokenVerificationMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -30,8 +34,8 @@ Route::get('/project-details',[ProjectController::class,'projectData']);
 Route::get('/resume-link',[ResumeController::class,'resumeLink']);
 Route::get('/experiencesData',[ResumeController::class,'experiencesData']);
 Route::get('/educationData',[ResumeController::class,'educationData']);
-Route::get('/skillData',[ResumeController::class,'skillData']);
-Route::get('/languageData',[ResumeController::class,'languageData']);
+Route::get('/skillData',[SkillController::class,'skillData']);
+Route::get('/languageData',[LanguageController::class,'languageData']);
 Route::get('/contactRequest',[ContactController::class,'contactRequest']);
 
 
@@ -39,3 +43,10 @@ Route::get('/contactRequest',[ContactController::class,'contactRequest']);
 Route::post('/add-hero',[HomeController::class,'addHero']);
 Route::post('/add-about',[HomeController::class,'addAboutData']);
 Route::post('/add-social',[HomeController::class,'addSocialData']);
+Route::post('/add-project',[ProjectController::class,'addProjectData']);
+Route::post('/add-resume',[ResumeController::class,'addResume']);
+Route::post('/add-experiences',[ExperienceController::class,'addExperience']);
+Route::post('/add-education',[EducationController::class,'addEducation']);
+Route::post('/add-skill',[SkillController::class,'addSkill']);
+Route::post('/add-language',[LanguageController::class,'addLanguage']);
+Route::post('/add-contact',[ContactController::class,'addContact']);

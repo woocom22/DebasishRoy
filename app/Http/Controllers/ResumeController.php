@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Resume;
 use Illuminate\Http\Request;
+use Mockery\Exception;
 
 class ResumeController extends Controller
 {
@@ -31,5 +33,23 @@ class ResumeController extends Controller
     }
     function languageData(Request $request){
 
+    }
+
+    function addResume(Request $request){
+        try {
+            Resume::create([
+                'downloadLink'=>$request->input('downloadLink'),
+            ]);
+            return response()->json([
+                'status'=>'success',
+                'message'=>'Resume added successfully!'
+            ],200);
+        }
+        catch (Exception $exception){
+            return response()->json([
+                'status'=>'failed',
+                'message'=>'Resume failed to add!'
+            ],200);
+        }
     }
 }
