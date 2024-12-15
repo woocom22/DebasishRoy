@@ -9,16 +9,13 @@ use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
-    function page(Request $request)
-    {
-
+    function page(Request $request){
+        $seo=DB::table('seo_properties')->where('pageName','=','projects')->first();
+        return view('pages.projects',['seo'=>$seo]);
     }
-
-    function projectData(Request $request)
-    {
-        return DB::table('projects')->first();
+    function projectData(Request $request){
+        return DB::table('projects')->get();
     }
-
     function addProjectData(Request $request)
     {
         try {

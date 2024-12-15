@@ -35,7 +35,7 @@ Route::get('/resume-link',[ResumeController::class,'resumeLink']);
 Route::get('/experiencesData',[ResumeController::class,'experiencesData']);
 Route::get('/educationData',[ResumeController::class,'educationData']);
 Route::get('/skillData',[SkillController::class,'skillData']);
-Route::get('/languageData',[LanguageController::class,'languageData']);
+Route::get('/language-details',[LanguageController::class,'languageData']);
 Route::get('/contactRequest',[ContactController::class,'contactRequest']);
 
 

@@ -11,30 +11,14 @@ class ContactController extends Controller
 {
     function page(Request $request)
     {
-
+        $seo=DB::table('seo_properties')->where('pageName','=','contact')->first();
+        return view('pages.contact',['seo'=>$seo]);
     }
     function contactRequest(Request $request){
         return DB::table('contacts')->first();
     }
 
     function addContact(Request $request){
-        try {
-            Contact::create([
-                'fullName'=>$request->input('fullName'),
-                'email'=>$request->input('email'),
-                'phone'=>$request->input('phone'),
-                'message'=>$request->input('message')
-            ]);
-            return response()->json([
-                'success'=>'success',
-                'message'=>'Thanks for contacting us!'
-            ],200);
-        }
-        catch (Exception $e){
-            return response()->json([
-                'success'=>'failed',
-                'message'=>'Contact add failed!'
-            ],200);
-        }
+        return DB::table('contacts')->insert($request->input());
     }
 }

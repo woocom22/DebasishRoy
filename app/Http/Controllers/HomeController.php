@@ -11,9 +11,9 @@ use Mockery\Exception;
 
 class HomeController extends Controller
 {
-    function page(Request $request)
-    {
-
+    function page(Request $request){
+        $seo=DB::table('seo_properties')->where('pageName','=','Home')->first();
+        return view('pages.home',['seo'=>$seo]);
     }
     function heroData(Request $request)
     {

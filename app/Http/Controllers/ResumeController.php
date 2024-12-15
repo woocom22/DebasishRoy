@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Resume;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Mockery\Exception;
 
 class ResumeController extends Controller
 {
-    function page(Request $request)
-    {
-
+    function page(Request $request){
+        $seo=DB::table('seo_properties')->where('pageName','=','resume')->first();
+        return view('pages.resume',['seo'=>$seo]);
     }
 
     function resumeLink(Request $request)

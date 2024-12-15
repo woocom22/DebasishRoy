@@ -30,6 +30,6 @@ class LanguageController extends Controller
 
     function languageData(Request $request)
     {
-        return DB::table('languages')->first();
+        return DB::table('languages')->get();
     }
 }
