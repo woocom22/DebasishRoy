@@ -28,8 +28,5 @@ class SkillController extends Controller
         }
     }
 
-    function skillData()
-    {
-        return DB::table('skills')->first();
-    }
+
 }

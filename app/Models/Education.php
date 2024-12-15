@@ -9,6 +9,8 @@ class Education extends Model
     protected $fillable=[
         'duration',
         'institutionName',
+        'location',
+        'degree',
         'field',
         'details'
     ];

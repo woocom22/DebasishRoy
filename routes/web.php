@@ -32,9 +32,9 @@ Route::get('/about-data',[HomeController::class,'aboutData']);
 Route::get('/social-data',[HomeController::class,'socialData']);
 Route::get('/project-details',[ProjectController::class,'projectData']);
 Route::get('/resume-link',[ResumeController::class,'resumeLink']);
-Route::get('/experiencesData',[ResumeController::class,'experiencesData']);
+Route::get('/experiencesData',[ExperienceController::class,'experiencesData']);
 Route::get('/educationData',[ResumeController::class,'educationData']);
-Route::get('/skillData',[SkillController::class,'skillData']);
+Route::get('/skillData',[ResumeController::class,'skillData']);
 Route::get('/language-details',[LanguageController::class,'languageData']);
 Route::get('/contactRequest',[ContactController::class,'contactRequest']);
 

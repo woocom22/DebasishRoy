@@ -13,6 +13,8 @@ class EducationController extends Controller
             Education::create([
                 'duration'=>$request->input('duration'),
                 'institutionName'=>$request->input('institutionName'),
+                'location'=>$request->input('location'),
+                'degree'=>$request->input('degree'),
                 'field'=>$request->input('field'),
                 'details'=>$request->input('details')
             ]);

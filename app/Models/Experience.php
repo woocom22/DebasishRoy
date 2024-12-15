@@ -10,6 +10,7 @@ class Experience extends Model
         'duration',
         'title',
         'designation',
+        'location',
         'details'
     ];
 }

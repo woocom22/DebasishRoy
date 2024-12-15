@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('duration',50);
             $table->string('institutionName',50);
+            $table->string('location',200);
+            $table->string('degree',200);
             $table->string('field',200);
             $table->text('details');
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('duration',50);
             $table->string('title',50);
             $table->string('designation',50);
+            $table->string('location',50);
             $table->text('details');
 
             $table->timestamp('created_at')->useCurrent();
