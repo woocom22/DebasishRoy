@@ -109,3 +109,10 @@ html {
     width: 50%;
     margin: 0 auto;
 }
+
+#HeroImg {
+    width: 80%;
+    height: 80%;
+    top: -27%;
+}
+

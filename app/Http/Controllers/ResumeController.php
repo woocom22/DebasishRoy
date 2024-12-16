@@ -16,7 +16,7 @@ class ResumeController extends Controller
 
     function resumeLink(Request $request)
     {
-
+        return DB::table('resumes')->first();
     }
 
 

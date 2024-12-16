@@ -22,6 +22,8 @@
     try {
         const response=await axios.get(URL);
 
+        document.getElementById('loading-div').classList.add('d-none');
+        document.getElementById('container-div').classList.remove('d-none');
         response.data.forEach((item)=>{
             document.getElementById('language-list').innerHTML+=(
                 `<div class="col mb-4 pb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">${item['name']}</div></div>`
